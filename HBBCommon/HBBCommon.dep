@@ -1,0 +1,14 @@
+# Microsoft Developer Studio Generated Dependency File, included by HBBCommon.mak
+
+.\HBBCommon.cpp : \
+	".\HBBCommon.h"\
+	".\StdAfx.h"\
+	
+
+.\HBBCommon.rc : \
+	".\res\HBBCommon.rc2"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	

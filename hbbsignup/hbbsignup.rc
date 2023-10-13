@@ -1,0 +1,222 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\hbbsignup.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\hbbsignup.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_HBBSIGNUP_DIALOG DIALOGEX 0, 0, 305, 307
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "HotBizツールバー サインアップツール"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "サーバー名(&S)",IDC_STATIC,7,10,61,8
+    EDITTEXT        IDC_SERVER,82,7,97,14,ES_AUTOHSCROLL
+    LTEXT           "ユーザー名Prefix(&P)",IDC_STATIC,7,31,61,8
+    EDITTEXT        IDC_PREFIX,82,28,40,14,ES_AUTOHSCROLL
+    LTEXT           "作成開始番号(&T)",IDC_STATIC,7,52,61,8
+    EDITTEXT        IDC_START,82,49,40,14,ES_AUTOHSCROLL
+    LTEXT           "作成終了番号(&E)",IDC_STATIC,7,73,61,8
+    EDITTEXT        IDC_END,82,70,40,14,ES_AUTOHSCROLL
+    LTEXT           "INIファイル名(&I)",IDC_STATIC,7,94,61,8
+    EDITTEXT        IDC_INI,82,91,97,14,ES_AUTOHSCROLL
+    LTEXT           "CABファイル名(&B)",IDC_STATIC,7,115,61,8
+    EDITTEXT        IDC_CAB,82,112,97,14,ES_AUTOHSCROLL
+    LTEXT           "作成フォルダ(&F)",IDC_STATIC,7,136,61,8
+    EDITTEXT        IDC_FOLDER,82,133,175,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&1)...",IDC_REFFOLDER,259,133,39,14
+    LTEXT           "証明書(&C)",IDC_STATIC,7,157,61,8
+    EDITTEXT        IDC_CERT,82,154,175,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&2)...",IDC_REFSPC,259,154,39,14
+    LTEXT           "秘密鍵(&R)",IDC_STATIC,7,178,61,8
+    EDITTEXT        IDC_PVK,82,175,175,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&3)...",IDC_REFPVK,259,175,39,14
+    LTEXT           "パスワード(&D)",IDC_STATIC,7,199,41,8
+    EDITTEXT        IDC_PASSWORD,82,196,40,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "説明(&E)",IDC_STATIC,7,220,23,8
+    EDITTEXT        IDC_EXPLAIN,82,217,216,14,ES_AUTOHSCROLL
+    LTEXT           "WEBの場所(&W)",IDC_STATIC,7,241,45,8
+    EDITTEXT        IDC_WEB,82,238,216,14,ES_AUTOHSCROLL
+    LTEXT           "TimeStamp Server(&R)",IDC_STATIC,7,262,64,8
+    EDITTEXT        IDC_TIMESTAMP,82,259,216,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "開始",IDOK,181,286,50,14
+    PUSHBUTTON      "終了",IDCANCEL,248,286,50,14
+END
+
+IDD_PROGRESSDLG_DIALOG DIALOG DISCARDABLE  0, 0, 199, 57
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "作成中．．．"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "Static",IDC_NAME,7,7,72,8
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,
+                    17,186,14
+    PUSHBUTTON      "中止",IDCANCEL,150,36,42,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "hbbsignup MFC ｱﾌﾟﾘｹｰｼｮﾝ\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "hbbsignup\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "hbbsignup.EXE\0"
+            VALUE "ProductName", "hbbsignup ｱﾌﾟﾘｹｰｼｮﾝ\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_HBBSIGNUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 298
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 300
+    END
+
+    IDD_PROGRESSDLG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\hbbsignup.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

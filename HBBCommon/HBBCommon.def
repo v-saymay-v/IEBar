@@ -1,0 +1,55 @@
+; HBBCommon.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "HBBCommon"
+DESCRIPTION  'HBBCommon Windows Dynamic Link Library'
+
+EXPORTS
+    ; 明示的なエクスポートはここへ記述できます
+	GetLoginInfo		@1
+	LoginHotBiz			@2
+	GetNewsInfo			@3
+	SetNewsInfo			@4
+	LoadHotBizIcon		@5
+	AlreadyLoggedin		@6
+	ConnectToHotBiz		@7
+	HotBizResult		@8
+	HistoryAdd			@9
+	GetLastChecked		@10
+	SetLastChecked		@11
+	ReadLine			@12
+	FreeReadLine		@13
+	GetProtocol			@14
+	GetHost				@15
+	GetServerPath		@16
+	GetCGI				@17
+	GetHeader			@18
+	GetParam			@19
+	ClearLoginInfo		@20
+	LogDialog			@21
+	GetIconSize			@22
+	GetIconItem			@23
+	GetDispIconInfo		@24
+	SetDispIconInfo		@25
+	GetWhereString		@26
+	GetGoTime			@27
+	GetLeaveTime		@28
+	SetGoTime			@29
+	SetLeaveTime		@30
+	SetWhere			@31
+	Reload				@32
+	BuildCommonLink		@33
+	BuildPrivateLink	@34
+	BuildHelperLink		@35
+	BuildWhereMenu		@36
+	ClearUserPass		@37
+	GetLogoSize			@38
+	LoadResourceIcon	@39
+	FuncToCommand		@40
+	GetHotBizUserName	@41
+	DbgMessageBox		@42
+	SetGoTimeStr		@43
+	SetLeaveTimeStr		@44
+	SetWhereMem			@45
+	LogoutHotBiz		@46
+	HotBizStatus		@47
+	GetServerTime		@48

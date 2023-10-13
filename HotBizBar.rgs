@@ -1,0 +1,26 @@
+HKCR
+{
+	HBIEBar.HotBizBar.1 = s 'HotBizツールバー'
+	{
+		CLSID = s '{CB07F490-0619-4D1D-B44A-8F458E47D0DF}'
+	}
+	HBIEBar.HotBizBar = s 'HotBizツールバー'
+	{
+		CLSID = s '{CB07F490-0619-4D1D-B44A-8F458E47D0DF}'
+		CurVer = s 'HBIEBar.HotBizBar.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CB07F490-0619-4D1D-B44A-8F458E47D0DF} = s 'HotBizツールバー'
+		{
+			ProgID = s 'HBIEBar.HotBizBar.1'
+			VersionIndependentProgID = s 'HBIEBar.HotBizBar'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{07DFE7F2-FBFD-4F20-A50D-26B92E65E6AB}'
+		}
+	}
+}

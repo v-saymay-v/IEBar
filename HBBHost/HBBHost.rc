@@ -1,0 +1,331 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 17, 1\r\n"
+    "#pragma code_page(932)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\HBBHost.rc2""  // Microsoft Visual C++ 以外のツールで編集されたリソース\r\n"
+    "#include ""l.jpn\\afxres.rc""          // 標準のコンポーネント\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\HBBHost.ico"
+IDI_LOGGEDIN            ICON    DISCARDABLE     "res\\loggedin.ico"
+IDI_STOPPED             ICON    DISCARDABLE     "res\\stopped.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HotBizツールバー 新着情報のﾊﾞｰｼﾞｮﾝ情報"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,21
+    LTEXT           "HBBHost Version 1.0",IDC_VERSION,34,7,194,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2004",IDC_COPYRIGHT,34,20,194,8
+    DEFPUSHBUTTON   "OK",IDOK,178,34,50,14,WS_GROUP
+END
+
+IDD_HBBHOST_DIALOG DIALOGEX 0, 0, 207, 197
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "新着情報設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "Windows起動時に自動的に起動する。(&A)",IDC_AUTOSTART,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,152,10
+    LTEXT           "※起動していないと新着情報は受け取れません。",
+                    IDC_STATIC,17,20,143,8
+    GROUPBOX        "",IDC_STATIC,7,32,193,9
+    LTEXT           "新着情報の受信：",IDC_STATIC,20,48,52,8
+    LTEXT           "開始",IDC_STATUS,79,48,21,8
+    PUSHBUTTON      "停止する(&S)",IDC_STOPSTART,118,45,68,14,WS_DISABLED
+    GROUPBOX        "",IDC_STATIC,7,60,193,9
+    LTEXT           "新着情報をサーバーから受け取る間隔(&T)",IDC_STATIC,7,76,
+                    125,8
+    COMBOBOX        IDC_INTERVAL,132,74,40,77,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "新着情報ウィンドウの表示時間（秒）(&P)",IDC_STATIC,7,94,
+                    120,8
+    EDITTEXT        IDC_POPUPTIME,132,90,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_PPTMSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,173,90,9,14
+    CONTROL         "新着メッセージを受けとった時に以下のファイルを再生する(&N)",
+                    IDC_PLAYSOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
+                    110,194,10
+    EDITTEXT        IDC_SOUNDFILE,7,123,193,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&R)...",IDC_REFER,118,141,39,14
+    PUSHBUTTON      "再生(&L)",IDC_PLAY,161,141,39,14
+    GROUPBOX        "",IDC_STATIC,7,158,193,9
+    DEFPUSHBUTTON   "OK",IDOK,150,176,50,14
+END
+
+IDD_LOGINDLG DIALOG DISCARDABLE  0, 0, 241, 125
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HotBizへのログイン"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "ログイン",IDOK,65,101,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,125,101,50,14
+    LTEXT           "URL(&U)",IDC_STATIC,10,13,23,8
+    EDITTEXT        IDC_URL,58,10,135,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "ユーザー名(&N)",IDC_STATIC,10,35,44,8
+    EDITTEXT        IDC_USERNAME,58,32,83,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード(&P)",IDC_STATIC,10,57,40,8
+    EDITTEXT        IDC_PASSWORD,58,54,83,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "ユーザー名とパスワードを保存する(&S)",IDC_AUTOLOGIN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,79,163,10
+END
+
+IDD_POPUPDLG DIALOGEX 0, 0, 187, 96
+STYLE DS_MODALFRAME | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_TITLE,1,1,171,15,SS_NOTIFY | SS_CENTERIMAGE | 
+                    SS_SUNKEN
+    PUSHBUTTON      "×",IDCANCEL,174,3,11,12,BS_FLAT
+    LTEXT           "",IDC_MESS,1,18,185,77,SS_NOTIFY | SS_SUNKEN
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "(株)アドミラルシステム\0"
+            VALUE "FileDescription", "HotBizツールバー新着情報\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "HBBHost\0"
+            VALUE "LegalCopyright", "Copyright (C) 2004 Admiral Systems Inc. All rights reserved.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "HBBHost.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "HotBizツールバー新着情報\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_HBBHOST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_LOGINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 231
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_POPUPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 186
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 95
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU DISCARDABLE 
+BEGIN
+    POPUP "HBBH"
+    BEGIN
+        MENUITEM "新着履歴(&H)...",             IDM_HBHISTORY
+        MENUITEM SEPARATOR
+        MENUITEM "ログイン(&L)...",             IDM_HBLOGIN
+        MENUITEM "停止(&S)",                    IDM_STARTSTOP
+        MENUITEM "オプション(&O)...",           IDM_HBHOPTION
+        MENUITEM SEPARATOR
+        MENUITEM "ヘルプ(&L)",                  IDM_HBHHELP
+        MENUITEM "バージョン情報(&A)...",       IDM_ABOUTBOX
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)",                    IDM_HBHQUIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SOCKETS_INIT_FAILED "Windows ｿｹｯﾄの初期化に失敗しました。"
+    IDS_LOGGEDIN            "%1：ログインしています"
+    IDS_NOTLOGGEDIN         "%1：ログインしていません"
+    IDS_STOPPED             "%1：一時中止しています"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "HotBizツールバー 新着情報"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_ABOUTBOX            "HotBizツールバー 新着情報のﾊﾞｰｼﾞｮﾝ情報(&A)..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_HBLOGIN             "HotBizへのログイン"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_HBHISTORY           "新着情報の履歴"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_HBHOPTION           "オプション設定"
+    IDM_HBHHELP             "ヘルプ"
+    IDM_HBHQUIT             "HotBizツールバー新着情報の終了"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE 17, 1
+#pragma code_page(932)
+#endif //_WIN32
+#include "res\HBBHost.rc2"  // Microsoft Visual C++ 以外のツールで編集されたリソース
+#include "l.jpn\afxres.rc"          // 標準のコンポーネント
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

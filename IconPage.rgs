@@ -1,0 +1,23 @@
+HKCR
+{
+	HBIEBar.IconPage.1 = s 'IconPage Class'
+	{
+		CLSID = s '{F288E7B8-C81F-4CDA-A2F8-245EF83F38A9}'
+	}
+	HBIEBar.IconPage = s 'IconPage Class'
+	{
+		CLSID = s '{F288E7B8-C81F-4CDA-A2F8-245EF83F38A9}'
+		CurVer = s 'HBIEBar.IconPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {F288E7B8-C81F-4CDA-A2F8-245EF83F38A9} = s 'IconPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

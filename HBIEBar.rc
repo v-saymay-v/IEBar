@@ -1,0 +1,388 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""HBIEBar.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,3
+ PRODUCTVERSION 1,0,0,3
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "CompanyName", "(株)アドミラルシステム"
+            VALUE "FileDescription", "HotBizツールバー IE component."
+            VALUE "FileVersion", "1, 0, 0, 3"
+            VALUE "InternalName", "HotBizBar"
+            VALUE "LegalCopyright", "Copyright (C) Admiral Systems Inc. 2004 All Rights Reserved."
+            VALUE "OLESelfRegister", "Enabled"
+            VALUE "OriginalFilename", "HBIEBar.DLL"
+            VALUE "ProductName", "HotBizツールバー IE component."
+            VALUE "ProductVersion", "1, 0, 0, 3"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_HOTBIZBAR           REGISTRY                "HotBizBar.rgs"
+IDR_ICONPAGE            REGISTRY                "IconPage.rgs"
+IDR_HOSTPAGE            REGISTRY                "HostPage.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_HOTBIZBAR MENU 
+BEGIN
+    POPUP "HotBizツールバー(&H)"
+    BEGIN
+        MENUITEM "予定表(&S)",                     IDM_SCHEDULE
+        MENUITEM "伝言所在(&M)",                    IDM_MESSAGE
+        MENUITEM "メール(&L)",                     IDM_MAIL
+        MENUITEM "掲示板(&F)",                     IDM_FORUM
+        MENUITEM "会議室(&B)",                     IDM_BULLETIN
+        MENUITEM "プロジェクト(&P)",                  IDM_PROJECT
+        MENUITEM "ToDo(&T)",                    IDM_TODO
+        MENUITEM "設備予約(&R)",                    IDM_RESERVE
+        MENUITEM "キャビネット(&C)",                  IDM_CABINET
+        MENUITEM "連絡先(&A)",                     IDM_ADDRESS
+        MENUITEM "ワークフロー(&W)",                  IDM_WORKFLOW
+        MENUITEM "タイムカード(&D)",                  IDM_TIMECARD
+        MENUITEM "回覧板(&K)",                     IDM_CIRCULATE
+        MENUITEM "報告書(&E)",                     IDM_REPORT
+        MENUITEM SEPARATOR
+        MENUITEM "新着履歴(&G)...",                 IDM_LOG
+        MENUITEM SEPARATOR
+        MENUITEM "共有リンク",                       IDM_COMMONLINK
+        MENUITEM "個人リンク",                       IDM_PRIVATELINK
+        MENUITEM "お役立ち情報",                      IDM_HELPERLINK
+        MENUITEM SEPARATOR
+        MENUITEM "ログイン(&N)...",                 IDM_LOGIN
+        MENUITEM "オプション(&O)...",                IDM_OPTION
+        MENUITEM "ヘルプ",                         IDM_HELP
+        MENUITEM "バージョン情報(&V)...",              IDM_VERSION
+        MENUITEM SEPARATOR
+        MENUITEM "アンインストール",                    IDM_UNINST
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ICONPAGE DIALOG  0, 0, 276, 158
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "表示しない機能(&N)",IDC_STATIC,5,5,102,8
+    LISTBOX         IDC_NOTSEL,5,15,96,95,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "追加(&C) >>",IDC_ADD,108,38,45,14
+    PUSHBUTTON      "<< 削除(&D)",IDC_DEL,108,66,45,14
+    LTEXT           "表示する機能(&P)",IDC_STATIC,159,5,102,8
+    LISTBOX         IDC_SELECT,159,15,96,95,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "↑",IDC_UP,257,27,14,14
+    PUSHBUTTON      "↓",IDC_DOWN,257,75,14,14
+    GROUPBOX        "その他のアイコン",IDC_STATIC,5,116,114,37
+    CONTROL         "所在の変更を表示(&W)",IDC_DISPWHERE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,127,79,10
+    CONTROL         "タイムカード打刻を表示(&H)",IDC_DISPTC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,140,93,10
+    GROUPBOX        "アイコンの大きさ",IDC_STATIC,142,116,114,37
+    CONTROL         "小さいアイコンを表示する(&S)",IDC_SMALLICON,"Button",BS_AUTORADIOBUTTON,148,127,98,10
+    CONTROL         "大きいアイコンを表示する(&B)",IDC_BIGICON,"Button",BS_AUTORADIOBUTTON,148,140,99,10
+END
+
+IDD_NEWSPAGE DIALOG  0, 0, 271, 105
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "新着情報をサーバーから受け取る(&N)",IDC_NEWSVALID,"Button",BS_AUTOCHECKBOX | BS_LEFT | WS_TABSTOP,5,5,124,10
+    LTEXT           "新着情報をサーバーから受け取る間隔(&T)",IDC_STATIC,5,24,125,8
+    COMBOBOX        IDC_INTERVAL,130,22,40,77,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "新着情報ウィンドウの表示時間（秒）(&P)",IDC_STATIC,5,41,120,8
+    EDITTEXT        IDC_POPUPTIME,130,38,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_PPTMSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,171,38,9,14
+    CONTROL         "新着メッセージを受けとった時に以下のファイルを再生する(&S)",IDC_PLAYSOUND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,58,193,10
+    EDITTEXT        IDC_SOUNDFILE,5,77,164,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&R)...",IDC_REFER,172,77,39,14
+    PUSHBUTTON      "再生(&L)",IDC_PLAY,214,77,39,14
+END
+
+IDD_LOGDLG DIALOG  0, 0, 334, 171
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "履歴の管理"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "表示",IDOK,2,2,50,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,62,2,50,14
+    PUSHBUTTON      "全削除(&A)",IDC_SELALL,122,2,50,14
+    PUSHBUTTON      "閉じる",IDCANCEL,282,2,50,14
+    LISTBOX         IDC_NEWSLOG,2,19,330,150,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_LOGINDLG DIALOG  0, 0, 241, 125
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HotBizへのログイン"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "ログイン",IDOK,65,101,50,14
+    PUSHBUTTON      "ｷｬﾝｾﾙ",IDCANCEL,125,101,50,14
+    LTEXT           "URL(&U)",IDC_STATIC,10,13,23,8
+    EDITTEXT        IDC_URL,58,10,135,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "ユーザー名(&N)",IDC_STATIC,10,35,44,8
+    EDITTEXT        IDC_USERNAME,58,32,83,14,ES_AUTOHSCROLL
+    LTEXT           "パスワード(&P)",IDC_STATIC,10,57,40,8
+    EDITTEXT        IDC_PASSWORD,58,54,83,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "ユーザー名とパスワードを保存する(&S)",IDC_AUTOLOGIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,79,163,10
+END
+
+IDD_POPUPDLG DIALOGEX 0, 0, 187, 96
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_TITLE,1,1,171,15,SS_NOTIFY | SS_CENTERIMAGE | SS_SUNKEN
+    PUSHBUTTON      "×",IDCANCEL,174,3,11,12,BS_FLAT
+    LTEXT           "",IDC_MESS,1,18,185,77,SS_NOTIFY | SS_SUNKEN
+END
+
+IDD_WAITDLG DIALOG  0, 0, 187, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "しばらくお待ちください"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CTEXT           "お待ちください",IDC_WAITMESS,9,10,168,44,SS_CENTERIMAGE
+END
+
+IDD_VERSIONDLG DIALOG  0, 0, 239, 57
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "HotBizツールバー について"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "OK",1,182,36,50,14
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "HotBiz Toolbar Ver.0.0.0.0",IDC_VER,38,9,182,8
+    LTEXT           "Copyright (C) Admiral Systems Inc. 2004 All Rights Reserved.",IDC_COPYRIGHT,39,20,193,8
+END
+
+IDD_HOSTPAGE DIALOG  0, 0, 271, 105
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "新着情報の設定はWindowsの「タスクトレイ」にある「H」のアイコンをダブルクリックして行ってください。",IDC_STATIC,5,5,196,20
+    LTEXT           "「タスクトレイ」に「H」アイコンがない場合は、下のボタンをクリックし、新着情報を起動してください。",IDC_STATIC,5,35,196,19
+    PUSHBUTTON      "新着情報起動(&S)",IDC_STARTHOST,5,63,108,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ICONPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 271
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_NEWSPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 266
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 100
+    END
+
+    IDD_LOGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 332
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_LOGINDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 231
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_POPUPDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 186
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_VERSIONDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_HOSTPAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 266
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 99
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "hbiebar.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_PROJNAME            "HBIEBar"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TITLEIconPage       "ボタンの設定"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_SCHEDULE            "予定表"
+    IDM_MESSAGE             "伝言所在"
+    IDM_HOME                "ホーム"
+    IDM_MAIL                "メール"
+    IDM_FORUM               "掲示板"
+    IDM_BULLETIN            "会議室"
+    IDM_PROJECT             "プロジェクト"
+    IDM_TODO                "ToDo"
+    IDM_RESERVE             "設備予約"
+    IDM_CABINET             "キャビネット"
+    IDM_ADDRESS             "連絡先"
+    IDM_WORKFLOW            "ワークフロー"
+    IDM_TIMECARD            "タイムカード"
+    IDM_CIRCULATE           "回覧板"
+    IDM_REPORT              "報告書"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_GOTIME              "出社"
+    IDM_LEAVETIME           "退社"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_WHERE               "所在"
+    IDM_LOG                 "新着履歴"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TITLEHostPage       "新着情報の設定"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "HBIEBar.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

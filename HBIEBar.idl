@@ -1,0 +1,57 @@
+// HBIEBar.idl : HBIEBar.dll 用の IDL ソース ファイル
+//
+
+// このファイルはタイプ ライブラリ (HBIEBar.tlb) を作成するために
+// タイプ ライブラリ作成ツール MIDL によって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(409F0914-E242-4A54-ADED-360E6DF47FF2),
+		dual,
+		helpstring("IHotBizBar Interface"),
+		pointer_default(unique)
+	]
+	interface IHotBizBar : IDispatch
+	{
+	};
+
+[
+	uuid(07DFE7F2-FBFD-4F20-A50D-26B92E65E6AB),
+	version(1.0),
+	helpstring("HBIEBar 1.0 ﾀｲﾌﾟ ﾗｲﾌﾞﾗﾘ")
+]
+library HBIEBARLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(CB07F490-0619-4D1D-B44A-8F458E47D0DF),
+		helpstring("HotBizBar Class")
+	]
+	coclass HotBizBar
+	{
+		[default] interface IHotBizBar;
+	};
+
+	[
+		uuid(F288E7B8-C81F-4CDA-A2F8-245EF83F38A9),
+		helpstring("IconPage Class")
+	]
+	coclass IconPage
+	{
+		interface IUnknown;
+	};
+
+	[
+		uuid(D13B392B-5DDC-438B-9E7B-CDE714179E9A),
+		helpstring("HostPage Class")
+	]
+	coclass HostPage
+	{
+		interface IUnknown;
+	};
+};

@@ -1,0 +1,23 @@
+HKCR
+{
+	HBIEBar.HostPage.1 = s 'HostPage Class'
+	{
+		CLSID = s '{D13B392B-5DDC-438B-9E7B-CDE714179E9A}'
+	}
+	HBIEBar.HostPage = s 'HostPage Class'
+	{
+		CLSID = s '{D13B392B-5DDC-438B-9E7B-CDE714179E9A}'
+		CurVer = s 'HBIEBar.HostPage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D13B392B-5DDC-438B-9E7B-CDE714179E9A} = s 'HostPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

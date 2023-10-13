@@ -1,0 +1,25 @@
+[version]
+signature="$CHICAGO$"
+AdvancedINF=2.0
+
+[Add.Code]
+hotbizbar.ini=hotbizbar.ini
+AsjInstMgr.ocx=AsjInstMgr.ocx
+
+[hotbizbar.ini]
+file-win32-x86=thiscab
+RegisterServer=no
+DestDir=10
+
+[AsjInstMgr.ocx]
+file-win32-x86=thiscab
+RegisterServer=yes
+clsid={3F5B4FA8-434A-4E13-BFDE-41643DB4F2A3}
+FileVersion=1,0,0,1
+DestDir=11
+
+[Setup Hooks]
+hook1=hook1
+
+[hook1]
+run=%EXTRACT_DIR%\aimsetup.exe hbbsetup.exe

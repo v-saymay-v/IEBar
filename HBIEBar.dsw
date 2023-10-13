@@ -1,0 +1,131 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# åxçê: Ç±ÇÃ‹∞∏ΩÕﬂ∞Ω Ãß≤Ÿ Çï“èWÇ‹ÇΩÇÕçÌèúÇµÇ»Ç¢Ç≈Ç≠ÇæÇ≥Ç¢!
+
+###############################################################################
+
+Project: "HBBCommon"=.\HBBCommon\HBBCommon.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/HotBizToolBar/HBBCommon", FTWAAAAA
+    .\hbbcommon
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "HBBHost"=.\HBBHost\HBBHost.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/HotBizToolBar/HBBHost", FSWAAAAA
+    .\hbbhost
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name HBBCommon
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "HBIEBar"=.\HBIEBar.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/HotBizToolBar/HBIEBar", OPWAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name hbbuninst
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name hbbsignup
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name HBBCommon
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name HBBHost
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name hbbsetup
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "hbbsetup"=.\hbbsetup\hbbsetup.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/HotBizToolBar/hbbsetup", ZRWAAAAA
+    .\hbbsetup
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hbbsignup"=.\hbbsignup\hbbsignup.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/HotBizToolBar/hbbsignup", JRWAAAAA
+    .\hbbsignup
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "hbbuninst"=.\hbbuninst\hbbuninst.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/HotBizToolBar/hbbuninst", VQWAAAAA
+    .\hbbuninst
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+
